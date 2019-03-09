@@ -1,0 +1,24 @@
+{
+  "workbench.colorTheme": "GitHub Clean White",
+  "workbench.colorCustomizations": {
+    "editorCursor.background": "#ffffff",
+    "editorCursor.foreground": "#0000bb",
+    "editor.lineHighlightBackground": "#f0f0f0",
+    "editor.selectionBackground": "#aaeeff"
+  },
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "explorer.openEditors.visible": 0,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.renderIndentGuides": false,
+  "_editor.fontFamily": "SF Mono",
+  "editor.fontWeight": "600",
+  "editor.fontSize": 24,
+  "_terminal.integrated.fontFamily": "SF Mono",
+  "terminal.integrated.fontWeight": "600",
+  "terminal.integrated.fontSize": 24,
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "editor.formatOnSave": false,
+  "markdown.preview.fontSize": 24,
+}
