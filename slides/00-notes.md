@@ -1,4 +1,12 @@
-# Lifecycle mount
+# Reactive Components without React
+
+Learn how to make web components without polyfills or frameworks. A few small libraries is all you need to cobble together robust solutions for lifecycle methods, rendering, data flow, and communication.
+
+Chris Basham is a designer and front-end developer for Indiana University, specializing in functional reactive programming with RxJS.
+
+https://bash.am
+
+# Mount and unmount
 
 Goal: Do something whenever a certain element appears.
 
@@ -189,4 +197,35 @@ npm install when-elements
 
 ```js
 import { added, removed } from 'when-elements'
+```
+
+# Rendering
+
+With `whenAdded`, we can do whatever we wish.
+
+Render within the element.
+Set up behaviors.
+
+```js
+let i = 0
+whenAdded('.counter', (element) => {
+  element.innerHTML = `Counter ${i++}`
+})
+```
+
+```js
+const { render } = 'react-dom'
+
+whenAdded('.counter', (element) => {
+  render(element, <Counter />)
+})
+```
+
+```js
+const { render, html } = 'lighterhtml'
+
+let i = 0
+whenAdded('.counter', (element) => {
+  render(element, html`woot ${i++}`)
+})
 ```
