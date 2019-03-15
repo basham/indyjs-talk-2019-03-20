@@ -2,7 +2,7 @@ const whenCallbacks = new Set()
 const mutationObserver = new MutationObserver(() => {
   whenCallbacks.forEach((callback) => callback())
 })
-mutationObserver.observe(document, { attributes: true, childList: true, subtree: true })
+mutationObserver.observe(document, { childList: true, subtree: true })
 
 // Abstract again so any number of selectors can be defined.
 
