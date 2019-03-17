@@ -5,7 +5,7 @@ import { whenAdded } from 'when-elements'
 import { BehaviorSubject, Subject, fromEvent } from 'rxjs'
 import { map } from 'rxjs/operators'
 
-whenAdded('#clicker', (element) => {
+whenAdded('[is="clicker"]', (element) => {
   const [ count$, setCount ] = useStream(0)
   const [ whenRemoved, whenRemovedStack ] = useCallbackStack()
 
