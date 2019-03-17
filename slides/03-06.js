@@ -1,11 +1,17 @@
-// Count seconds.
+// Render HTML.
 
 import { render, html } from 'lighterhtml'
-import { whenAdded } from 'when-elements'
 
-whenAdded('.seconds', (element) => {
-  let seconds = 0
-  setInterval(() => {
-    render(element, () => html`Seconds: ${seconds++}`)
-  }, 1000)
-})
+render(document.getElementById('clicker'), () =>
+  html`<button>Clicks: <strong>0</strong></button>`
+)
+
+/*
+Before:
+<div id="clicker" />
+
+After:
+<div id="clicker">
+  <button>Clicks: <strong>0</strong></button>
+</div>
+*/

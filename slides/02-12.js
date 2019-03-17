@@ -1,3 +1,4 @@
+// Watch for changes to the DOM.
 
 const mutationObserver = new MutationObserver(() => {
   // DOM tree is updated.

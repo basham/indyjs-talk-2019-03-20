@@ -1,4 +1,4 @@
-// Use a similar technique for whenRemoved().
+// Watch for elements removed from the DOM.
 
 whenAdded('.item', (element) => {
   // Initialize

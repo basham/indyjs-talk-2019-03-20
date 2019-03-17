@@ -1,12 +1,21 @@
-// Count seconds.
+// Render HTML with static state.
+// <div id="clicker" />
 
 import { render, html } from 'lighterhtml'
-import { interval } from 'rxjs'
-import { whenAdded } from 'when-elements'
 
-whenAdded('.seconds', (element) => {
-  const subscription = interval(1000).subscribe((seconds) => {
-    render(element, () => html`Seconds: ${seconds++}`)
-  })
-  return () => subscription.unsubscribe()
-})
+const element = document.getElementById('clicker')
+const state = {
+  value: 0
+}
+
+render(element, () => renderComponent(state))
+
+function renderComponent (props) {
+  return html`
+  <button>Clicks: ${renderValue(props)}</button>`
+}
+
+function renderValue (props) {
+  const { value } = props
+  return html`<strong>${value}</strong>`
+}

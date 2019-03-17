@@ -1,10 +1,11 @@
+// Watch for elements added to the DOM
+// matching any CSS selector.
+
 const whenCallbacks = new Set()
 const mutationObserver = new MutationObserver(() => {
   whenCallbacks.forEach((callback) => callback())
 })
 mutationObserver.observe(document, { childList: true, subtree: true })
-
-// Abstract again so any number of selectors can be defined.
 
 function whenAdded (selector, callback) {
   const addedElements = new Set();
