@@ -1,10 +1,6 @@
 // Render HTML with dynamic state.
 
-import { render, html } from 'lighterhtml'
-
-update() // value: 0
-click()  // value: 1
-click()  // value: 2
+const { render, html } = lighterhtml
 
 const element = document.getElementById('clicker')
 let state = {
@@ -36,3 +32,7 @@ function renderValue (props) {
   const { value } = props
   return html`<strong>${value}</strong>`
 }
+
+update() // value: 0
+click()  // value: 1
+click()  // value: 2

@@ -1,7 +1,12 @@
 html {
   font-family: sans-serif;
+  font-size: 1.5rem;
 }
 
 body {
   margin: 2rem;
+}
+
+button {
+  font-size: inherit;
 }

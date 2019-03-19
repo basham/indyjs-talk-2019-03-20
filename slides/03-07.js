@@ -1,7 +1,6 @@
 // Render HTML with static state.
-// <div id="clicker" />
 
-import { render, html } from 'lighterhtml'
+const { render, html } = lighterhtml
 
 const element = document.getElementById('clicker')
 const state = {

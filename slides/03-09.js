@@ -1,7 +1,8 @@
 // Render clickers.
 
-import { render, html } from 'lighterhtml'
-import { whenAdded } from 'when-elements'
+const { render, html } = lighterhtml
+const { whenAdded } = WhenElements
+
 
 whenAdded('#clicker', (element) => {
   let state = {
@@ -20,6 +21,8 @@ whenAdded('#clicker', (element) => {
   function update () {
     render(element, () => renderComponent({ ...state, handlers }))
   }
+
+  update()
 })
 
 function renderComponent (props) {

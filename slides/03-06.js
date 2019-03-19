@@ -1,17 +1,7 @@
 // Render HTML.
 
-import { render, html } from 'lighterhtml'
+const { render, html } = lighterhtml
 
 render(document.getElementById('clicker'), () =>
   html`<button>Clicks: <strong>0</strong></button>`
 )
-
-/*
-Before:
-<div id="clicker" />
-
-After:
-<div id="clicker">
-  <button>Clicks: <strong>0</strong></button>
-</div>
-*/

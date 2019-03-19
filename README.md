@@ -8,7 +8,7 @@ Slide deck for [Indy.js meetup, March 20, 2019](https://www.meetup.com/indyjs/ev
 
 ## Install
 
-1. Install dependencies to run demo slides (`slides/*.js` or `slides/*.html`).
+1. Install dependencies to run demo slides (`slides/*.js` or `slides/*.html`). All demos have been tested in Chrome 72.
 
 ```
 npm install
