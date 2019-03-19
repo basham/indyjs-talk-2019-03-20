@@ -23,7 +23,7 @@
   "editor.formatOnSave": false,
   "markdown.preview.fontSize": 24,
   "markdown.styles": [
-      "styles.css"
+      "markdown.css"
   ],
   "markdown.preview.breaks": true
 }

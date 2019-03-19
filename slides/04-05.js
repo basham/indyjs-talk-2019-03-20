@@ -1,8 +1,6 @@
 // Produce and manipulate data over time.
 // $ node slides/04-05.js
 
-// import { interval } from 'rxjs'
-// import { map } from 'rxjs/operators'
 const { interval } = require('rxjs')
 const { map } = require('rxjs/operators')
 
