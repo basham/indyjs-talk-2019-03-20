@@ -16,7 +16,7 @@ Learn how to make web components without polyfills or frameworks. A few small li
 npm install
 ```
 
-2. Install VSCode theme [`GitHub Clean White Theme`](https://marketplace.visualstudio.com/items?itemName=saviorisdead.Theme-GitHubCleanWhite).
+2. Install Visual Studio Code theme [`GitHub Clean White Theme`](https://marketplace.visualstudio.com/items?itemName=saviorisdead.Theme-GitHubCleanWhite).
 
 3. Append to `~/.bash_profile` for cleaner command line prompts.
 
