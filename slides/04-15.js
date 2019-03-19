@@ -1,15 +1,15 @@
 // Render clickers.
 
-import { render, html } from 'lighterhtml'
-import { whenAdded } from 'when-elements'
-import { BehaviorSubject, Subject, fromEvent } from 'rxjs'
-import { map } from 'rxjs/operators'
+const { render, html } = lighterhtml
+const { whenAdded } = WhenElements
+const { BehaviorSubject, fromEvent } = rxjs
+const { map } = rxjs.operators
 
 whenAdded('[is="clicker"]', (element) => {
   const [ count$, setCount ] = useStream(0)
   const [ whenRemoved, whenRemovedStack ] = useCallbackStack()
 
-  const clickSubscription = fromEvent(this, 'click').subscribe(() => {
+  const clickSubscription = fromEvent(element, 'click').subscribe(() => {
     setCount(count$.getValue() + 1)
   })
   whenRemoved(() => clickSubscription.unsubscribe())

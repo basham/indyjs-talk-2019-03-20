@@ -1,22 +1,30 @@
-// Watch for elements added to the DOM
-// matching any CSS selector.
+// Integrate whenRemoved() with whenAdded() for a cleaner API.
 
-const whenCallbacks = new Set()
-const mutationObserver = new MutationObserver(() => {
-  whenCallbacks.forEach((callback) => callback())
+whenAdded('.item', (element) => {
+  // Initialize
+  return () => {
+    // Clean up
+  }
 })
-mutationObserver.observe(document, { childList: true, subtree: true })
 
 function whenAdded (selector, callback) {
-  const addedElements = new Set();
+  const addedElements = new Set()
   check()
   whenCallbacks.add(check)
   function check () {
     Array.from(document.querySelectorAll(selector))
       .filter((element) => !addedElements.has(element))
-      .forEach(function (element) {
+      .forEach((element) => {
         addedElements.add(element)
-        callback(element)
+        // Start new
+        const returnValue = callback(element)
+        const removedCallback = typeof returnValue === 'function'
+          ? returnValue
+          : () => {}
+        whenRemoved(element, () => {
+          addedElements.delete(element)
+          removedCallback()
+        })
       })
   }
 }

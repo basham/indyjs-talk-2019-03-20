@@ -1,19 +1,20 @@
-// Watch for elements added to the DOM
-// matching a given CSS selector.
+// Watch for elements removed from the DOM.
 
-const mutationObserver = new MutationObserver(() => {
-  checkCounter()
+whenAdded('.item', (element) => {
+  // Initialize
+  whenRemoved(element, () => {
+    // Clean up
+  })
 })
-mutationObserver.observe(document, { childList: true, subtree: true })
 
-const addedCounters = new Set()
-function checkCounter () {
-  Array.from(document.querySelectorAll('.item'))
-    .filter((element) => !addedCounters.has(element))
-    .forEach((element) => {
-      addedCounters.add(element)
-      // Initialize
-    })
+function whenRemoved (target, callback) {
+  check()
+  whenCallbacks.add(check)
+  function check () {
+    if (target && document.contains(target)) {
+      return
+    }
+    whenCallbacks.delete(check)
+    callback()
+  }
 }
-
-checkCounter()

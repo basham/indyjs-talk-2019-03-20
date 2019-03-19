@@ -6,11 +6,26 @@ const { whenAdded } = WhenElements
 
 whenAdded('my-clicker', (element) => {
   let state = {
-    value: 0
+    //value: 0
   }
 
   function click () {
-    state.value++
+    //state.value++
+    //update()
+    setState({ value: state.value + 1 })
+  }
+
+  function setState (newState) {
+    state = { ...state, ...newState }
+    update()
+  }
+
+  function click () {
+    setState((s) => ({ value: s.value + 1 }))
+  }
+
+  function setState (cb) {
+    state = { ...state, ...cb(state) }
     update()
   }
 
@@ -22,7 +37,8 @@ whenAdded('my-clicker', (element) => {
     render(element, () => renderComponent({ ...state, handlers }))
   }
 
-  update()
+  //update()
+  setState({ value: 0 })
 })
 
 function renderComponent (props) {
