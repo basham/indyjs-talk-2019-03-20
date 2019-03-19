@@ -1,10 +1,12 @@
 # Reactive Components without React
 
+Slide deck for [Indy.js meetup, March 20, 2019](https://www.meetup.com/indyjs/events/ljvvdpyzfbbc/).
+
+## Description
+
 Learn how to make web components without polyfills or frameworks. A few small libraries is all you need to cobble together robust solutions for lifecycle methods, rendering, data flow, and communication.
 
 [Chris Basham](https://bash.am) is a designer and front-end developer for Indiana University, specializing in functional reactive programming with RxJS.
-
-Slide deck for [Indy.js meetup, March 20, 2019](https://www.meetup.com/indyjs/events/ljvvdpyzfbbc/).
 
 ## Install
 
