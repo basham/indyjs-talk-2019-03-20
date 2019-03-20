@@ -1,8 +1,7 @@
-// Render clickers.
+// setState() calls update().
 
 const { render, html } = lighterhtml
 const { whenAdded } = WhenElements
-
 
 whenAdded('my-clicker', (element) => {
   let state = {}

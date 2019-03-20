@@ -1,4 +1,4 @@
-// Render clickers.
+// Render multiple clickers.
 
 const { render, html } = lighterhtml
 const { whenAdded } = WhenElements
@@ -11,10 +11,6 @@ whenAdded('my-clicker', (element) => {
   function click () {
     state.value++
     update()
-  }
-
-  function click () {
-    setState((s) => ({ value: s.value + 1 }))
   }
 
   const handlers = {

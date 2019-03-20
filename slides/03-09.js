@@ -3,7 +3,6 @@
 const { render, html } = lighterhtml
 const { whenAdded } = WhenElements
 
-
 whenAdded('#clicker', (element) => {
   let state = {
     value: 0
