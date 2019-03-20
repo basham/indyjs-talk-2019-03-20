@@ -7,7 +7,7 @@
     "editor.lineHighlightBackground": "#f0f0f0",
     "editor.selectionBackground": "#aaeeff"
   },
-  "_workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": false,
   "workbench.statusBar.visible": false,
   "explorer.openEditors.visible": 0,
   "editor.hover.enabled": false,
@@ -24,7 +24,7 @@
   "editor.formatOnSave": false,
   "markdown.preview.fontSize": 24,
   "markdown.styles": [
-      "markdown.css"
+    "markdown.css"
   ],
   "markdown.preview.breaks": true
 }
