@@ -1,20 +1,17 @@
-// Manipulate data streams
+// Produce and manipulate data over time.
 // $ node slides/04-07.js
-//
-// a$: ---0------1------2-------------3---
-// b$: ---0----------------------4--------
-// c$: --[0,0]--[1,0]--[2,0]--[2,4]--[3,4]
 
-const { combineLatest, interval } = require('rxjs')
-const { filter, map } = require('rxjs/operators')
+const { interval } = require('rxjs')
+const { map } = require('rxjs/operators')
 
-const a$ = interval(1000)
+interval(1000).pipe(
+  map((value) => `${value + 1}s`)
+).subscribe((seconds) => {
+  console.log(seconds)
+})
 
-const b$ = a$.pipe(
-  filter((value) => value % 2 === 0),
-  map((value) => value * 2)
-)
-
-const c$ = combineLatest(a$, b$)
-
-c$.subscribe(console.log)
+// Output:
+// 1s
+// 2s
+// 3s
+// ...

@@ -1,29 +1,20 @@
-// Render clickers.
+// Manipulate data streams
+// $ node slides/04-09.js
+//
+// a$: ---0------1------2-------------3---
+// b$: ---0----------------------4--------
+// c$: --[0,0]--[1,0]--[2,0]--[2,4]--[3,4]
 
-const { render, html } = lighterhtml
-const { whenAdded } = WhenElements
-const { BehaviorSubject, fromEvent } = rxjs
-const { map } = rxjs.operators
+const { combineLatest, interval } = require('rxjs')
+const { filter, map } = require('rxjs/operators')
 
-whenAdded('[is="clicker"]', (element) => {
-  const count$ = new BehaviorSubject(0)
+const a$ = interval(1000)
 
-  const clickSubscription = fromEvent(element, 'click').subscribe(() => {
-    count$.next(count$.getValue() + 1)
-  })
+const b$ = a$.pipe(
+  filter((value) => value % 2 === 0),
+  map((value) => value * 2)
+)
 
-  const state$ = count$.pipe(
-    map((count) => ({ count }))
-  )
-  const stateSubscription = state$.subscribe((state) => {
-    const { count } = state
-    render(element, () =>
-      html`Clicks: <strong>${count}</strong>`
-    )
-  })
+const c$ = combineLatest(a$, b$)
 
-  return () => {
-    clickSubscription.unsubscribe()
-    stateSubscription.unsubscribe()
-  }
-})
+c$.subscribe(console.log)

@@ -7,7 +7,7 @@
     "editor.lineHighlightBackground": "#f0f0f0",
     "editor.selectionBackground": "#aaeeff"
   },
-  "workbench.editor.showTabs": false,
+  "_workbench.editor.showTabs": false,
   "workbench.statusBar.visible": false,
   "explorer.openEditors.visible": 0,
   "editor.minimap.enabled": false,

@@ -1,6 +1,6 @@
 # Reactive Components without React
 
-Lifecycle, Rendering, Data Flow, and Communication
+Tools and techniques for component lifecycle, rendering, data flow, and communication.
 
 Slides: https://github.com/basham/indyjs-talk-2019-03-20
 
