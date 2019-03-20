@@ -1,4 +1,4 @@
-// Render clickers.
+// Integrate useStream (instead of useState) and new useCallbackStack.
 
 const { render, html } = lighterhtml
 const { whenAdded } = WhenElements

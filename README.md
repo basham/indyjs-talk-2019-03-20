@@ -8,6 +8,14 @@ Learn how to make web components without polyfills or frameworks. A few small li
 
 [Chris Basham](https://bash.am) is a designer and front-end developer for Indiana University, specializing in functional reactive programming with RxJS.
 
+Featured tools:
+
+- [React](https://reactjs.org/)
+- [RxJS](https://github.com/ReactiveX/rxjs)
+- [lighterhtml](https://github.com/WebReflection/lighterhtml)
+- [Conduit](https://github.com/indiana-university/conduit/)
+- [WhenElements](https://github.com/basham/when-elements)
+
 ## Install
 
 1. Install dependencies to run demo slides (`slides/*.js` or `slides/*.html`). All demos have been tested in Chrome 72.
@@ -16,7 +24,12 @@ Learn how to make web components without polyfills or frameworks. A few small li
 npm install
 ```
 
-2. Install Visual Studio Code theme [`GitHub Clean White Theme`](https://marketplace.visualstudio.com/items?itemName=saviorisdead.Theme-GitHubCleanWhite).
+2. Install [Visual Studio Code](https://code.visualstudio.com/) and the following plugins:
+
+- [GitHub Clean White Theme](https://marketplace.visualstudio.com/items?itemName=saviorisdead.Theme-GitHubCleanWhite)
+- [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
+- [HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode)
+- [literally-html](https://marketplace.visualstudio.com/items?itemName=webreflection.literally-html)
 
 3. Append to `~/.bash_profile` for cleaner command line prompts.
 
