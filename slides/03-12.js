@@ -3,18 +3,17 @@
 const { render, html } = lighterhtml
 const { whenAdded } = WhenElements
 
-whenAdded('my-clicker', (element) => {
-  let state = {
-    value: 0
-  }
 
-  function click () {
-    state.value++
+whenAdded('my-clicker', (element) => {
+  let state = {}
+
+  function setState (newState) {
+    state = { ...state, ...newState }
     update()
   }
 
   function click () {
-    setState((s) => ({ value: s.value + 1 }))
+    setState({ value: state.value + 1 })
   }
 
   const handlers = {
@@ -25,7 +24,7 @@ whenAdded('my-clicker', (element) => {
     render(element, () => renderComponent({ ...state, handlers }))
   }
 
-  update()
+  setState({ value: 0 })
 })
 
 function renderComponent (props) {
