@@ -27,15 +27,24 @@ npm install
 2. Install [Visual Studio Code](https://code.visualstudio.com/) and the following plugins:
 
 - [GitHub Clean White Theme](https://marketplace.visualstudio.com/items?itemName=saviorisdead.Theme-GitHubCleanWhite)
-- [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
-- [HTML Preview](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode)
 - [literally-html](https://marketplace.visualstudio.com/items?itemName=webreflection.literally-html)
+- [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
 
 3. Append to `~/.bash_profile` for cleaner command line prompts.
 
 ```
 export PS1='$ '
 ```
+
+## Tips
+
+1. `Command + Tab`: Switch among windows (VSCode and browser).
+
+2. `Option + b`: Open the selected `*.html` file in the browser.
+
+3. `Shift + Command + v`: Preview the selected `*.md` file.
+
+4. `Right click > Open Preview`: Preview the selected `*.md` file.
 
 ## References
 
