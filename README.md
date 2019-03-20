@@ -46,6 +46,8 @@ export PS1='$ '
 
 4. `Right click > Open Preview`: Preview the selected `*.md` file.
 
+5. `Control + [tick]`: Open terminal.
+
 ## References
 
 - [Visual Studio Code settings](https://staltz.com/your-ide-as-a-presentation-tool.html) by [André Staltz](https://staltz.com).
