@@ -2,6 +2,8 @@
 
 Slide deck for [Indy.js meetup, March 20, 2019](https://www.meetup.com/indyjs/events/ljvvdpyzfbbc/).
 
+Recording (1h:22m): https://www.youtube.com/watch?v=0LfxfYmMazA
+
 ## Description
 
 Learn how to make web components without polyfills or frameworks. A few small libraries is all you need to cobble together robust solutions for lifecycle methods, rendering, data flow, and communication.
